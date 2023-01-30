@@ -85,6 +85,7 @@ def ankify(
         callback=since_callback,
     ),
     max: Optional[int] = typer.Option(30, help="Limit fetching of games to `max`",),
+    store: bool = typer.Option(False, help="Select if fetched games should be stored"),
     perf_type: Optional[List[PerfType]] = typer.Option(
         None, help="Filter fetching of games to the selected `perf_types`"
     ),
